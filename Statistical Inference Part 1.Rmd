@@ -24,7 +24,7 @@ The first part of the project will try to investigate the exponential distributi
 The exponential distribution will be simulated in R with rexp(n, lambda) where lambda is the rate parameter. The mean of exponential distribution is 1/lambda and the standard deviation is also 1/lambda. Set lambda = 0.2 for all of the simulations. There will 1000 simulations for distribution of averages of 40 exponentials.
 
 ```{r simulation, message=FALSE, warning=FALSE}
-set.seed(33)
+set.seed(2019)
 n <- 40         # number of exponentials
 sims <- 1000    # number of simulations
 lambda <- 0.2   
@@ -71,7 +71,7 @@ mean_plot +
                        color = "blue") +
         ggtitle(label = "Distributions of Sample Means",
              subtitle = "40 means with 1000 simulations") +
-        theme(plot.title = element_text(size = 12, hjust = 0.5),
+        theme(plot.title = element_text(size = 12, hjust = 0.5, face = "bold"),
               plot.subtitle = element_text(size = 12, hjust = 0.5)) +
         xlab("Simulation Means") +
         geom_line(aes(x_norm, y_norm), size = 1) +
